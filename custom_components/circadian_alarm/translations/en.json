@@ -1,0 +1,91 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Set up a light-based wake-up and wind-down alarm. All values can be changed later from the integration's options.",
+        "data": {
+          "name": "Name",
+          "lights": "Lights to control",
+          "wake_time": "Wake time",
+          "sleep_time": "Sleep time",
+          "prewake_minutes": "Start ramping up this many minutes before wake time",
+          "peak_offset_minutes": "Reach peak brightness this many minutes after wake time",
+          "winddown_minutes": "Start dimming down this many minutes before sleep time",
+          "min_brightness_pct": "Minimum brightness",
+          "max_brightness_pct": "Peak brightness",
+          "min_color_temp_kelvin": "Warmest color temperature",
+          "max_color_temp_kelvin": "Coolest color temperature",
+          "transition_seconds": "Light transition duration",
+          "update_interval_seconds": "How often to update the lights during a ramp",
+          "turn_off_at_sleep": "Turn lights off once sleep time is reached"
+        }
+      }
+    },
+    "error": {
+      "no_lights": "Select at least one light.",
+      "brightness_range": "Minimum brightness must not be greater than peak brightness.",
+      "color_temp_range": "Warmest color temperature must not be greater than coolest color temperature.",
+      "same_time": "Wake time and sleep time must be different."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "Set up a light-based wake-up and wind-down alarm.",
+        "data": {
+          "lights": "Lights to control",
+          "wake_time": "Wake time",
+          "sleep_time": "Sleep time",
+          "prewake_minutes": "Start ramping up this many minutes before wake time",
+          "peak_offset_minutes": "Reach peak brightness this many minutes after wake time",
+          "winddown_minutes": "Start dimming down this many minutes before sleep time",
+          "min_brightness_pct": "Minimum brightness",
+          "max_brightness_pct": "Peak brightness",
+          "min_color_temp_kelvin": "Warmest color temperature",
+          "max_color_temp_kelvin": "Coolest color temperature",
+          "transition_seconds": "Light transition duration",
+          "update_interval_seconds": "How often to update the lights during a ramp",
+          "turn_off_at_sleep": "Turn lights off once sleep time is reached"
+        }
+      }
+    },
+    "error": {
+      "no_lights": "Select at least one light.",
+      "brightness_range": "Minimum brightness must not be greater than peak brightness.",
+      "color_temp_range": "Warmest color temperature must not be greater than coolest color temperature.",
+      "same_time": "Wake time and sleep time must be different."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "phase": {
+        "name": "Phase",
+        "state": {
+          "night": "Night",
+          "waking": "Waking",
+          "day": "Day",
+          "winding_down": "Winding down"
+        }
+      },
+      "target_brightness": {
+        "name": "Target brightness"
+      },
+      "target_color_temp": {
+        "name": "Target color temperature"
+      },
+      "next_change": {
+        "name": "Next change"
+      }
+    },
+    "binary_sensor": {
+      "active": {
+        "name": "Ramp active"
+      }
+    },
+    "switch": {
+      "enabled": {
+        "name": "Enabled"
+      }
+    }
+  }
+}

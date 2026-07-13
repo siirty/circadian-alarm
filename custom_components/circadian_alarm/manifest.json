@@ -1,0 +1,12 @@
+{
+  "domain": "circadian_alarm",
+  "name": "Circadian Alarm",
+  "codeowners": [
+    "@siirty"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/siirty/circadian-alarm",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/siirty/circadian-alarm/issues",
+  "version": "0.0.0"
+}
